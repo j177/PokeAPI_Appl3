@@ -7,7 +7,8 @@
         android:id="@+id/itemImageView"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,18 +19,24 @@
             android:id="@+id/itemIdTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:fontFamily="@font/architects_daughter"
+            android:textColor="#673AB7"
+            android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/itemNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:fontFamily="@font/architects_daughter"
+            android:textColor="#673AB7"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/itemTypeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:fontFamily="@font/architects_daughter"
+            android:textColor="#673AB7"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

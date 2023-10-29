@@ -1,12 +1,15 @@
 package com.example.pokeapi_appl2
 
+import android.graphics.Typeface
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
+import android.os.Build
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
@@ -15,6 +18,7 @@ import okhttp3.Headers
 import org.json.JSONException
 import java.io.InputStream
 import java.net.URL
+
 
 class MainActivity : ComponentActivity() {
     private lateinit var nameTextView: TextView
@@ -61,6 +65,11 @@ class MainActivity : ComponentActivity() {
                         val pokemon = Pokemon(name, id, imageUrl, type)
                         pokemonList.add(pokemon)
                         viewAdapter.notifyDataSetChanged()
+
+                        val typeface = ResourcesCompat.getFont(this@MainActivity, R.font.architects_daughter)
+                        nameTextView.typeface = typeface
+                        idTextView.typeface = typeface
+
                     } catch (e: JSONException) {
                         e.printStackTrace()
                     }

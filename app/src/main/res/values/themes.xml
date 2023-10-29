@@ -2,4 +2,14 @@
 <resources>
 
     <style name="Theme.PokeAPI_Appl2" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="CustomTheme" parent="Theme.PokeAPI_Appl2">
+        <item name="android:colorPrimary">@color/custom_color_primary</item>
+        <item name="android:colorPrimaryDark">@color/custom_color_primary_dark</item>
+        <item name="android:colorAccent">@color/custom_color_accent</item>
+    </style>
+
+    <color name="custom_color_primary">#FF5722</color>
+    <color name="custom_color_primary_dark">#E64A19</color>
+    <color name="custom_color_accent">#FF4081</color>
+
 </resources>

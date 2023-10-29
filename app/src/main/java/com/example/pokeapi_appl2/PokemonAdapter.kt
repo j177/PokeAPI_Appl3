@@ -5,7 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
+import android.graphics.Typeface
 
 class PokemonAdapter(private val pokemonList: List<MainActivity.Pokemon>) :
     RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
@@ -29,9 +31,12 @@ class PokemonAdapter(private val pokemonList: List<MainActivity.Pokemon>) :
         holder.nameTextView.text = "Name: ${currentItem.name}"
         holder.typeTextView.text = "Type: ${currentItem.type}"
 
-        // Load image using DownloadImageTask or any other preferred method
-        // For simplicity, I'm assuming you have a URL in the Pokemon object
         MainActivity.DownloadImageTask(holder.imageView).execute(currentItem.imageUrl)
+
+        val typeface = Typeface.create(ResourcesCompat.getFont(holder.itemView.context, R.font.architects_daughter), Typeface.NORMAL)
+        holder.idTextView.typeface = typeface
+        holder.nameTextView.typeface = typeface
+        holder.typeTextView.typeface = typeface
     }
 
     override fun getItemCount(): Int {
